@@ -7,7 +7,7 @@
   <body ng-app="directoryApp">
     <div class="container">
       <div class="row">
-        <h1>UF Directory App</h1>
+        <h1 class="logo">UF Directory App</h1>
       </div>
       <div class="row" ng-controller="ListingsController">
         <div class="col-md-6">
@@ -21,8 +21,8 @@
             <input type="text" class="form-control" placeholder="Search" ng-model = "searchFilter">
           </div>
           <div class="tableWrapper">
-            <table class="table table-striped table-hover">
-              <tr>
+            <table class="table table-striped table-hover" id="t01">
+              <tr id="heading1">
                 <th>Code</th>
                 <th>Building Name</th>
                 <th></th>
@@ -85,27 +85,45 @@
               </div>
             </div>
           </div>
-          <div class= "col-md-7">
+          <div class= "col-md-7" align="left">
             <div>
-              <h3 class="createListing">Add Listing</h3>
-                <form class="form-horizontal" role="form">
-                  <table class="newListingTable">
+              <h3>Add Listing</h3>
+                <form>
+                  <table>
                     <tr>
-                      <th>Name of Building:</th>
-                      <th>Building Code:</th>
+                      <label>
+                        <th>Name of Building:</th>
+                      </label>
+                      <label>
+                        <th>Building Code:</th>
+                      </label>
+                      <label>
+                        <th>Building Address:</th>
+                      </label>
                     </tr>
-                    <td><input type="text" class="form-buildingName" name= "name" ng-model="listing.name"></td>
-                    <td><input type="text" class="form-buildingCode" name= "code" ng-model="listing.code"></td>
+                    <label>
+                      <td><input type="text" name= "name" ng-model="listing.name"></td>
+                    </label>
+                    <label>
+                      <td><input type="text" name= "code" ng-model="listing.code"></td>
+                    </label>
+                    <label>
+                      <td><input type="text" name= "address" ng-model="listing.address"></td>
+                    </label>
                     <tr>
-                      <th>Longitude:</th>
-                      <th>Latitude:</th>
+                     <label>
+                        <th>Longitude:</th>
+                      </label>
+                      <label>
+                        <th>Latitude:</th>
+                      </label>
                     </tr>
-                    <td><input type="text" class="form-buildingLong" name= "longitude" ng-model="listing.coordinates.longitude"></td>
-                    <td><input type="text" class="form-buildingLat" name= "latitude" ng-model="listing.coordinates.latitude"></td>
-                    <tr>
-                      <th>Building Address:</th>
-                    </tr>
-                    <td><input type="text" class="form-buildingAddress" name= "address" ng-model="listing.address"></td>
+                    <label>
+                      <td><input type="text" name= "longitude" ng-model="listing.coordinates.longitude"></td>
+                    </label>
+                    <label>
+                      <td><input type="text" name= "latitude" ng-model="listing.coordinates.latitude"></td>
+                    </label>
                   </table>
                 </form>
                 <br>

@@ -7,3 +7,31 @@
   overflow: auto;
   
 }
+body{
+ color: #888;
+  font: 400 16px/22px "Lato","Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+.logo{
+	border-top:4px solid #648880;
+	float:left;
+	font-size: 48px;
+	font-weight: 100;
+	letter-spacing: .5px;
+	line-height: 44px;
+	padding:40px 0  22px 0;
+	text-transform: uppercase;
+}
+th{
+	background-color:#648880;
+	color:black;
+	font-weight: 400;
+}
+label, input{
+	display:block;
+	margin-right: 20px;
+}
+label{
+	margin-bottom:20px;
+}
+
